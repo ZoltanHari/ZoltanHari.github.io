@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoltan Hari | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Zoltan Hari Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: white;
             background: linear-gradient(270deg, #141e30, #243b55, #1a2a6c, #000428);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
 
         @keyframes gradientShift {
@@ -28,153 +19,93 @@
             100% { background-position: 0% 50%; }
         }
 
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 50px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        h1, h2 {
+            font-family: monospace;
+        }
+
         a {
             color: #60efff;
             text-decoration: none;
-            transition: all 0.3s ease;
         }
 
         a:hover {
             color: #00ff87;
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #cfd8dc;
         }
 
         .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
             flex: 1 1 300px;
             min-width: 280px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .card h2 {
-            font-family: 'Fira Code', monospace;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .card p {
-            color: #cfd8dc;
-            margin-bottom: 10px;
-        }
-
-        .tech-icons {
+        img {
+            max-width: 100%;
+            border-radius: 10px;
             margin-top: 20px;
-        }
-
-        .tech-icons i {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            color: #60efff;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding: 20px 0;
-            color: #60efff;
-        }
-
-        footer a:hover {
-            color: #00ff87;
-        }
-
-        @media(max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            .projects {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <section>
             <h1>Zoltan Hari</h1>
-            <p>Computer Science & Cybersecurity Student | Python & Linux Enthusiast</p>
-        </header>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Zoltan Hari, a programmer in Computer Science and Cybersecurity at Warren Tech. I code primarily in Python 3 using VS Code. I’m working towards Python and Linux certifications and learning cybersecurity best practices.</p>
+            <p>Computer Science & Cybersecurity Student | Python & Linux</p>
         </section>
 
-        <section id="projects">
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I'm Zoltan Hari. I code mainly in Python and I'm learning cybersecurity and Linux.</p>
+        </section>
+
+        <section>
             <h2>Projects</h2>
             <div class="projects">
                 <div class="card">
-                    <h2>CodeWars Account</h2>
-                    <p>Practicing coding challenges and algorithms on Codewars to improve problem-solving skills and proficiency in Python.</p>
-                    <a href="https://www.codewars.com/users/RustSmile872221">View Stats</a>
+                    <h2>Codewars</h2>
+                    <p>Practicing coding problems and learning algorithms.</p>
+                    <a href="https://www.codewars.com/users/ZoltanHari" target="_blank">View Profile</a>
                 </div>
                 <div class="card">
-                    <h2>PicoCTF Account</h2>
-                    <p>Hands-on assingments exploring Linux, networks, and security tools.</p>
-                      <a href="https://play.picoctf.org/users/ZoltanHari" target="_blank">View Profile</a>
-                </div>
-                <div class="card">
-                    <h2>GitHub Projects</h2>
-                    <p>Check out my GitHub repositories for open-source contributions.</p>
-                    <a href="https://github.com/ZoltanHari" target="_blank">View GitHub</a>
+                    <h2>picoCTF</h2>
+                    <p>Solving cybersecurity challenges and learning hacking skills safely.</p>
+                    <a href="https://picoctf.org/profile/ZoltanHari" target="_blank">View Profile</a>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="tech-icons">
-            <i class="fab fa-python" title="Python"></i>
-            <i class="fab fa-linux" title="Linux"></i>
-            <i class="fab fa-github" title="GitHub"></i>
-            <i class="fas fa-terminal" title="VS Code / Terminal"></i>
-        </section>
-
-        <section id="links">
+        <section>
             <h2>Important Links</h2>
             <p><a href="https://www.linkedin.com/in/zoltan-hari-767ba6385" target="_blank">LinkedIn</a></p>
             <p><a href="mailto:harizozi1009@gmail.com">Email Me</a></p>
             <p><a href="https://zoltanhari.github.io/personal.html" target="_blank">About Me Page</a></p>
         </section>
 
-        <footer>
-            &copy; 2025 Zoltan Hari | <a href="mailto:harizozi1009@gmail.com">Contact Me</a>
+        <footer style="text-align:center; margin-top:40px;">
+            &copy; 2025 Zoltan Hari
         </footer>
     </div>
 </body>
