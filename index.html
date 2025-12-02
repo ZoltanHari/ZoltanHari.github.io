@@ -5,20 +5,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            color: #222; /* darker text for light background */
-            background: linear-gradient(270deg, #fdfbfb, #e2ebf0, #d9e4f5, #f5f7fa);
+            color: #222;
+            background: linear-gradient(270deg, #e8f0f8, #d6e3f3, #c8d6ea, #e4edf7);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             margin: 0;
             padding: 0;
-        }
+        }  
 
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
-}
-
+        }
 
         .container {
             width: 90%;
@@ -27,25 +26,27 @@
             padding: 50px;
         }
 
+
         section {
             margin-bottom: 40px;
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 10px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(4px);
         }
 
         h1, h2 {
             font-family: monospace;
         }
 
+
         a {
-            color: #60efff;
+            color: #3b6dd8;
             text-decoration: none;
         }
-
         a:hover {
-            color: #00ff87;
+            color: #1e4fb8;
         }
 
         .projects {
@@ -58,10 +59,12 @@
             flex: 1 1 300px;
             min-width: 280px;
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 10px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(4px);
         }
+
 
         img {
             max-width: 100%;
