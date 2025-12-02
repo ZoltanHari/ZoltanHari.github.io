@@ -86,23 +86,17 @@
             margin-top: 20px;
         }
 
-        /* Optional styling for the quote */
-        #quote-box {
+        #quote-of-the-day {
+            margin-top: 20px;
             text-align: center;
             font-style: italic;
-            font-size: 1.25em;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-
-        <!-- NEW QUOTE OF THE DAY SECTION -->
-        <section>
-            <h2>Quote of the Day</h2>
-            <div id="quote-box">Loading...</div>
-        </section>
 
         <section>
             <h1>Zoltan Hari</h1>
@@ -144,6 +138,9 @@
             <div style="text-align: center; margin-top: 25px;">
                 <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
             </div>
+
+            <!-- Quote of the Day -->
+            <div id="quote-of-the-day"></div>
         </section>
 
         <footer style="text-align:center; margin-top:40px;">
@@ -156,6 +153,7 @@
             document.body.classList.toggle('dark-mode');
         }
 
+        // Quote of the Day - similar style to original getFortune()
         function getQuoteOfTheDay() {
             const quotes = [
                 "A pleasant surprise is waiting for you.",
@@ -166,7 +164,10 @@
             ];
 
             const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote-of-the-day").textContent = quotes[randomIndex];
         }
+
+        window.onload = getQuoteOfTheDay;
     </script>
 
 </body>
