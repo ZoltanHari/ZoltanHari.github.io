@@ -11,7 +11,14 @@
             animation: gradientShift 15s ease infinite;
             margin: 0;
             padding: 0;
-        }  
+            transition: 0.4s ease-in-out;
+        }
+
+        body.dark-mode {
+            color: white;
+            background: linear-gradient(270deg, #141e30, #243b55, #1a2a6c, #000428);
+            background-size: 400% 400%;
+        }
 
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -26,27 +33,40 @@
             padding: 50px;
         }
 
-
-        section {
+        section, .card {
             margin-bottom: 40px;
             padding: 20px;
             border: 1px solid rgba(0,0,0,0.1);
             border-radius: 10px;
             background: rgba(255,255,255,0.4);
             backdrop-filter: blur(4px);
+            transition: 0.4s;
+        }
+
+        body.dark-mode section,
+        body.dark-mode .card {
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
         }
 
         h1, h2 {
             font-family: monospace;
         }
 
-
         a {
             color: #3b6dd8;
             text-decoration: none;
+            transition: 0.3s;
         }
         a:hover {
             color: #1e4fb8;
+        }
+
+        body.dark-mode a {
+            color: #60efff;
+        }
+        body.dark-mode a:hover {
+            color: #00ff87;
         }
 
         .projects {
@@ -58,13 +78,7 @@
         .card {
             flex: 1 1 300px;
             min-width: 280px;
-            padding: 20px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 10px;
-            background: rgba(255,255,255,0.4);
-            backdrop-filter: blur(4px);
         }
-
 
         img {
             max-width: 100%;
@@ -74,6 +88,9 @@
     </style>
 </head>
 <body>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
     <div class="container">
         <section>
             <h1>Zoltan Hari</h1>
@@ -91,31 +108,38 @@
                 <div class="card">
                     <h2>Codewars</h2>
                     <p>Practicing coding problems and learning algorithms.</p>
-                    <a target="_blank" href="https://www.codewars.com/users/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://www.codewars.com/users/ZoltanHari">View Profile</a>
                 </div>
                 <div class="card">
                     <h2>picoCTF</h2>
                     <p>Solving cybersecurity challenges and learning hacking skills safely.</p>
-                    <a target="_blank" href="https://picoctf.org/profile/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://picoctf.org/profile/ZoltanHari">View Profile</a>
                 </div>
-                 <div class="card">
+                <div class="card">
                     <h2>Github</h2>
                     <p>Check out my projects, scripts, and coding experiments.</p>
-                    <a target="_blank" href="https://github.com/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://github.com/ZoltanHari">View Profile</a>
                 </div>
             </div>
         </section>
 
         <section>
             <h2>Important Links</h2>
-            <p><a target="_blank" href="https://www.linkedin.com/in/zoltan-hari-767ba6385" target="_blank">LinkedIn</a></p>
+            <p><a target="_blank" href="https://www.linkedin.com/in/zoltan-hari-767ba6385">LinkedIn</a></p>
             <p><a target="_blank" href="mailto:harizozi1009@gmail.com">Email Me</a></p>
-            <p><a target="_blank" href="https://zoltanhari.github.io/personal.html" target="_blank">About Me Page</a></p>
+            <p><a target="_blank" href="https://zoltanhari.github.io/personal.html">About Me Page</a></p>
         </section>
 
         <footer style="text-align:center; margin-top:40px;">
             &copy; 2025 Zoltan Hari
         </footer>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
 </body>
 </html>
