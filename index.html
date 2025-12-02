@@ -85,11 +85,25 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+
+        /* Optional styling for the quote */
+        #quote-box {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.25em;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
+
+        <!-- NEW QUOTE OF THE DAY SECTION -->
+        <section>
+            <h2>Quote of the Day</h2>
+            <div id="quote-box">Loading...</div>
+        </section>
+
         <section>
             <h1>Zoltan Hari</h1>
             <p>Computer Science & Cybersecurity Student | Python & Linux</p>
@@ -140,6 +154,18 @@
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+        }
+
+        function getQuoteOfTheDay() {
+            const quotes = [
+                "A pleasant surprise is waiting for you.",
+                "Adventure awaits you around the next corner.",
+                "Your hard work will pay off today.",
+                "You will find a hidden treasure today.",
+                "Your creativity will shine bright today."
+            ];
+
+            const randomIndex = Math.floor(Math.random() * quotes.length);
         }
     </script>
 
