@@ -87,7 +87,7 @@
         }
 
         #quote-of-the-day {
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
             font-style: italic;
             font-size: 1.2em;
@@ -138,9 +138,12 @@
             <div style="text-align: center; margin-top: 25px;">
                 <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
             </div>
+        </section>
 
-            <!-- Quote of the Day -->
-            <div id="quote-of-the-day"></div>
+        <!-- NEW Quote of the Day SECTION -->
+        <section>
+            <h2>Quote of the Day</h2>
+            <div id="quote-of-the-day">Loading...</div>
         </section>
 
         <footer style="text-align:center; margin-top:40px;">
@@ -153,7 +156,7 @@
             document.body.classList.toggle('dark-mode');
         }
 
-        // Quote of the Day - similar style to original getFortune()
+        // Quote of the Day - same style as original getFortune(), consistent per day
         function getQuoteOfTheDay() {
             const quotes = [
                 "A pleasant surprise is waiting for you.",
@@ -163,8 +166,14 @@
                 "Your creativity will shine bright today."
             ];
 
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quote-of-the-day").textContent = quotes[randomIndex];
+            const today = new Date();
+            const start = new Date(today.getFullYear(), 0, 0);
+            const diff = today - start;
+            const oneDay = 1000 * 60 * 60 * 24;
+            const dayOfYear = Math.floor(diff / oneDay);
+
+            const index = dayOfYear % quotes.length;
+            document.getElementById("quote-of-the-day").textContent = quotes[index];
         }
 
         window.onload = getQuoteOfTheDay;
