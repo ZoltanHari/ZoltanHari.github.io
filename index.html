@@ -156,22 +156,23 @@
         }
 
         async function getQuoteOfTheDay() {
-            const quoteBox = document.getElementById("quote-of-the-day");
-            try {
-                const response = await fetch('https://thequoteshub.com/api/quotes/random');
-                if (!response.ok) throw new Error('Quote fetch failed');
-                const data = await response.json();
+            const quoteBox = document.getElementById("quote-of-the-day");
+            try {
+                const response = await fetch('https://api.quotable.io/random'); 
+                if (!response.ok) throw new Error('Quote fetch failed');
+                const data = await response.json();
 
-                console.log(data); 
-                const quote = data.quote || data.q || "No quote available";
-                const author = data.author || data.a || "Unknown";
+                console.log(data);
 
-                quoteBox.textContent = `"${quote}" — ${author}`;
-            } catch (error) {
-                console.error(error);
-                quoteBox.textContent = "Sorry, could not load a quote today.";
-            }
-        }
+                const quote = data.content;
+                const author = data.author;
+
+                quoteBox.textContent = `"${quote}" — ${author}`;
+            } catch (error) {
+                console.error(error);
+                quoteBox.textContent = "Sorry, could not load a quote today.";
+            }
+        }
 
         window.onload = getQuoteOfTheDay;
     </script>
