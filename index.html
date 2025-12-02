@@ -87,7 +87,7 @@
         }
 
         #quote-of-the-day {
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
             font-style: italic;
             font-size: 1.2em;
@@ -138,9 +138,11 @@
             <div style="text-align: center; margin-top: 25px;">
                 <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
             </div>
+        </section>
 
-            <!-- Quote of the Day -->
-            <div id="quote-of-the-day"></div>
+        <section>
+            <h2>Quote of the Day</h2>
+            <div class="card" id="quote-of-the-day">Loading...</div>
         </section>
 
         <footer style="text-align:center; margin-top:40px;">
@@ -149,9 +151,10 @@
     </div>
 
     <script>
-        function toggleDarkMode() {
+            function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
 
         function getQuoteOfTheDay() {
             const quotes = [
