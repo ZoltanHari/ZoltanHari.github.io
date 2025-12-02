@@ -85,10 +85,28 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+
+        #themeButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        body.dark-mode #themeButton {
+            background: #111;
+            color: white;
+            border: 1px solid #555;
+        }
+
     </style>
 </head>
 <body>
-
     <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <div class="container">
