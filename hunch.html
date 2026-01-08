@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NASA HUNCH Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: linear-gradient(270deg, #ffffff, #d7e9ff, #b3d4ff, #e9f1ff);
+            background-size: 600% 600%;
+            animation: gradientShift 12s ease infinite;
+            margin: 0;
+            padding: 0;
+            transition: 0.4s ease-in-out;
+        }
+
+        body{
+            color: white;
+            background: linear-gradient(270deg, #141e30, #243b55, #1a2a6c, #000428);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 50px;
+        }
+
+        section, .card {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(4px);
+            transition: 0.4s;
+        }
+
+        h1, h2 {
+            font-family: monospace;
+        }
+
+        h2 {
+            color: rgba(243,79,76,1)
+        }
+
+        a {
+            color: #3b6dd8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #1e4fb8;
+        }
+
+        body a {
+            color: #60efff;
+        }
+        body a:hover {
+            color: #00ff87;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section>
+            <h1>Welcome to NASA HUNCH</h1>
+        </section>
+
+        <section>
+            <h1>Description:</h1>
+            <p>The HERA Moonscape Rover will be a set of four rover designed to accomplish separate tasks. One will hold cubes carrying ArduSat and CubeSat payloads. Another will pick up and move the cubes using an arm. One will be a support robot, especially designed to assist the other three rover. Finally, one will use Bluetooth and cameras to capture and log video surveillance.</p>
+        </section>
+
+        <section>
+            <h1>Objectives:</h1>
+            <ul>
+                <li>Make a rover that can operate on HERA missions</li>
+                <li>Controlled by bluetooth</li>
+                <li>Make multiple designs with different uses</li>
+                <li>Transportation</li>
+                <ul>
+                    <li>Carries payload</li>
+                </ul>
+                <li>Manipulation</li>
+                <ul>
+                    <li>Has an arm</li>
+                </ul>
+                <li>Support</li>
+                <ul>
+                    <li>Assists other rover</li>
+            </ul>
+                <li>Communications & Control</li>
+                <ul>
+                    <li>Camera and bluetooth to record and send videos</li>
+                </ul>
+        </section>
+
+        <section>
+            <h1>Problem Statement:</h1>
+            <p>NASA requires four remotely operated specialized rovers. They need to be able to traverse Mars terrain, with one being able to carry a payload, one being able to lift objects with an arm, one being able to record videos and store data, and a final robot being able to support the others.</p>
+            <h2>Criteria & Constraints:</h2>
+            <ul>
+                <li>Base Landscape Design</li>
+                <ul>
+                    <li>25% scaled model of 8 ft x 8 ft landscape</li>
+                    <li>Minimum 3 ft height of side walls</li>
+                    <li>Foldable design to go from full scale to half of its width and length</li>
+                    <li>Easily assemblable and disassemblable</li>
+                </ul>
+            </ul>
+            <h2>Specific Rovers:</h2>
+            <ul>
+                <li>Transportation</li>
+                <ul>
+                    <li>Can carry a 10 cm<sup>3</sup> cube</li>
+                    <li>Can hold 0.5-1.0 lb</li>
+                </ul>
+                <li>Manipulation</li>
+                <ul>
+                    <li>Lifting arm</li>
+                    <li>Must be precise</li>
+                    <li>Can transfer the 10 cm<sup>3</sup> cubes</li>
+                </ul>
+                <li>Support</li>
+                <ul>
+                    <li>Assist other rover</li>
+                    <li>Carry extra batteries</li>
+                    <li>Winch pull stuck rovers</li>
+                </ul>
+                <li>Communications & Control</li>
+                <ul>
+                    <li>Bluetooth controls that are compatible with other HERA systems</li>
+                    <li>Video feed storage that can be transmitted</li>
+                    <li>Data logging</li>
+                    <li>Can be monitored from mission control</li>
+                    <li>Hive to allow other rovers to move autonomously</li>
+                </ul>
+                <li>Control System & Robotics</li>
+                <ul>
+                    <li>Arduino-based control systems</li>
+                    <li>Bluetooth-controlled</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>User Personas:
+            <p>The robots need to have simple controls and be able to easily adjust to different terrain because the people using it might not have instant communication with it. This means it has to be able to receive an instruction and complete a set of actions based on that instruction, rather than one at a time.</p>
+            <p>They also need to be easily collapsable as the people collapsing them might be inhibited by thick EVA gloves.</p>
+        </section>
+    </div>
+</body>
+</html>
