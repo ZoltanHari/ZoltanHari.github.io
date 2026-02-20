@@ -1,3 +1,5 @@
+markdown_extensions:
+  - attr_list
 # ZoltanHari.github.io
 
 Hello, this is the README for my site where you can read about me and what it is I do. 
