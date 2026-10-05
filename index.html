@@ -1,176 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zoltan Hari Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: linear-gradient(270deg, #ffffff, #d7e9ff, #b3d4ff, #e9f1ff);
-            background-size: 600% 600%;
-            animation: gradientShift 12s ease infinite;
-            margin: 0;
-            padding: 0;
-            transition: 0.4s ease-in-out;
-        }
+<title>Zoltan Hari Portfolio</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+color: white;
+background: linear-gradient(270deg, #141e30, #243b55, #1a2a6c, #000428);
+background-size: 400% 400%;
+animation: gradientShift 15s ease infinite;
+margin: 0;
+padding: 0;
+}
 
-        body.dark-mode {
-            color: white;
-            background: linear-gradient(270deg, #141e30, #243b55, #1a2a6c, #000428);
-            background-size: 400% 400%;
-        }
+@keyframes gradientShift {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+.container {
+width: 90%;
+max-width: 900px;
+margin: auto;
+padding: 50px;
+}
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            padding: 50px;
-        }
+section {
+margin-bottom: 40px;
+padding: 20px;
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 10px;
+background: rgba(255,255,255,0.05);
+}
 
-        section, .card {
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 10px;
-            background: rgba(255,255,255,0.4);
-            backdrop-filter: blur(4px);
-            transition: 0.4s;
-        }
+h1, h2 {
+font-family: monospace;
+}
 
-        body.dark-mode section,
-        body.dark-mode .card {
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.05);
-        }
+a {
+color: #60efff;
+text-decoration: none;
+}
 
-        h1, h2 {
-            font-family: monospace;
-        }
+a:hover {
+color: #00ff87;
+}
 
-        a {
-            color: #3b6dd8;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        a:hover {
-            color: #1e4fb8;
-        }
+.projects {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
 
-        body.dark-mode a {
-            color: #60efff;
-        }
-        body.dark-mode a:hover {
-            color: #00ff87;
-        }
+.card {
+flex: 1 1 300px;
+min-width: 280px;
+padding: 20px;
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 10px;
+background: rgba(255,255,255,0.05);
+}
 
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            flex: 1 1 300px;
-            min-width: 280px;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        #quote-of-the-day {
-            margin-top: 10px;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.2em;
-        }
-    </style>
+img {
+max-width: 100%;
+border-radius: 10px;
+margin-top: 20px;
+}
+</style>
 </head>
 <body>
+<div class="container">
+<section>
+<h1>Zoltan Hari</h1>
+<p>Computer Science & Cybersecurity Student | Python & Linux</p>
+</section>
 
-    <div class="container">
+<section>
+<h2>About Me</h2>
+<p>Hi, I'm Zoltan Hari. I code mainly in Python and I'm learning cybersecurity and Linux.</p>
+</section>
 
-        <section>
-            <h1>Zoltan Hari</h1>
-            <p>Computer Science & Cybersecurity Student | Python & Linux</p>
-        </section>
+<section>
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">
+<h2>Codewars</h2>
+<p>Practicing coding problems and learning algorithms.</p>
+                    <a href="https://www.codewars.com/users/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://www.codewars.com/users/ZoltanHari" target="_blank">View Profile</a>
+</div>
+<div class="card">
+<h2>picoCTF</h2>
+<p>Solving cybersecurity challenges and learning hacking skills safely.</p>
+                    <a href="https://picoctf.org/profile/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://picoctf.org/profile/ZoltanHari" target="_blank">View Profile</a>
+</div>
+<div class="card">
+<h2>Github</h2>
+<p>Check out my projects, scripts, and coding experiments.</p>
+                    <a href="https://github.com/ZoltanHari" target="_blank">View Profile</a>
+                    <a target="_blank" href="https://github.com/ZoltanHari" target="_blank">View Profile</a>
+</div>
+</div>
+</section>
 
-        <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Zoltan Hari. I code mainly in Python and I'm learning cybersecurity and Linux.</p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="card">
-                    <h2>Codewars</h2>
-                    <p>Practicing coding problems and learning algorithms.</p>
-                    <a target="_blank" href="https://www.codewars.com/users/ZoltanHari">View Profile</a>
-                </div>
-                <div class="card">
-                    <h2>picoCTF</h2>
-                    <p>Solving cybersecurity challenges and learning hacking skills safely.</p>
-                    <a target="_blank" href="https://picoctf.org/profile/ZoltanHari">View Profile</a>
-                </div>
-                <div class="card">
-                    <h2>Github</h2>
-                    <p>Check out my projects, scripts, and coding experiments.</p>
-                    <a target="_blank" href="https://github.com/ZoltanHari">View Profile</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Important Links</h2>
-            <p><a target="_blank" href="https://www.linkedin.com/in/zoltan-hari-767ba6385">LinkedIn</a></p>
+<section>
+<h2>Important Links</h2>
+            <p><a href="https://www.linkedin.com/in/zoltan-hari-767ba6385" target="_blank">LinkedIn</a></p>
+            <p><a href="mailto:harizozi1009@gmail.com">Email Me</a></p>
+            <p><a href="https://zoltanhari.github.io/personal.html" target="_blank">About Me Page</a></p>
+            <p><a target="_blank" href="https://www.linkedin.com/in/zoltan-hari-767ba6385" target="_blank">LinkedIn</a></p>
             <p><a target="_blank" href="mailto:harizozi1009@gmail.com">Email Me</a></p>
-            <p><a target="_blank" href="https://zoltanhari.github.io/personal.html">About Me Page</a></p>
+            <p><a target="_blank" href="https://zoltanhari.github.io/personal.html" target="_blank">About Me Page</a></p>
+</section>
 
-            <div style="text-align: center; margin-top: 25px;">
-                <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-            </div>
-        </section>
-
-        <section>
-            <h2>Quote of the Day</h2>
-            <div class="card" id="quote-of-the-day">Loading...</div>
-        </section>
-
-        <footer style="text-align:center; margin-top:40px;">
-            &copy; 2025 Zoltan Hari
-        </footer>
-    </div>
-
-    <script>
-            function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-
-        function getQuoteOfTheDay() {
-            const quotes = [
-                "A pleasant surprise is waiting for you.",
-                "Adventure awaits you around the next corner.",
-                "Your hard work will pay off today.",
-                "You will find a hidden treasure today.",
-                "Your creativity will shine bright today."
-            ];
-
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quote-of-the-day").textContent = quotes[randomIndex];
-        }
-
-        window.onload = getQuoteOfTheDay;
-    </script>
-
+<footer style="text-align:center; margin-top:40px;">
+&copy; 2025 Zoltan Hari
+</footer>
+</div>
 </body>
 </html>
